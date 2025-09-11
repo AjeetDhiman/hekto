@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@theme {
+  /* 
+	** Colors
+	*/
+  --color-ghost-white: #eef0fb;
+  --color-light-grey: #e7e6ef;
+  --color-blue-grey: #1518751a;
+  --color-accent: #fb2d86;
+  --color-purple: #a063b6;
+  --color-blue: #151875;
+  --color-vivid-blue: #2e1ac7;
+  --color-sky-blue: #00c3ff;
+  --color-violet-blue: #3f509d;
+  --color-radical-red: #fb2347;
+  --color-violet: #7e33e1;
+  --color-lavender-blue: #898eb8;
+  --color-lavender-mist: #dfd1f5;
+  --color-cool-blue: #f2f0ff;
+  /* 
+	** Gradients
+	*/
+  --color-lg-1: #f5faff;
+  --color-lg-2: #f1f0ff;
+
+  --color-bg-1: #148aff;
+  --color-bg-2: #1db5e7;
+
+  --color-pg-1: #fa3de4;
+  --color-pg-2: #ff299f;
+
+  --color-sbg-1: #47daff;
+  --color-sbg-2: #1aa4f9;
+
+  --color-mgg-1: #36e6d4;
+  --color-mgg-2: #2be974;
+
+  --color-wdg-1: #f5faff;
+  --color-wdg-2: #f1f0ff;
+
+  /* 
+	** Shadows
+	*/
+  --shadow-md: 0 8px 40px 0 #281b8d0d;
+  --shadow-lg: 0 4px 79px 0 #7e26e31a;
+}
+
+@layer base {
+  @font-face {
+    font-display: swap;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/josefin-sans-v33-latin-regular.woff2");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("./assets/fonts/josefin-sans-v33-latin-500.woff2") format("woff2");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./assets/fonts/josefin-sans-v33-latin-600.woff2") format("woff2");
+  }
+  @font-face {
+    font-display: swap;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/josefin-sans-v33-latin-700.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/lato-v24-latin-regular.woff2") format("woff2");
+  }
+  body {
+    @apply font-josefin;
+  }
+
+  button,
+  a,
+  select {
+    @apply cursor-pointer;
+  }
+}
+
+@utility container {
+  @apply mx-auto max-w-[1180px] px-4;
+}
+
+@utility font-josefin {
+  font-family: "Josefin Sans";
+}
+
+@utility font-lato {
+  font-family: "Lato";
+}
+
+@utility font-inherit {
+  font: inherit;
+}

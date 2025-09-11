@@ -1,0 +1,15 @@
+export { EnvelopeIcon } from "./EnvelopeIcon";
+export { PhoneIcon } from "./PhoneIcon";
+export { ChevronDownIcon } from "./ChevronDownIcon";
+export { CheckIcon } from "./CheckIcon";
+export { HeartIcon } from "./HeartIcon";
+export { UserIcon } from "./UserIcon";
+export { CartIcon } from "./CartIcon";
+export { SearchIcon } from "./SearchIcon";
+export { FreeDeliveryIcon } from "./FreeDeliveryIcon";
+export { CashbackIcon } from "./CashbackIcon";
+export { PremiumQualityIcon } from "./PremiumQualityIcon";
+export { Support24X7Icon } from "./Support24X7Icon";
+export { PenIcon } from "./PenIcon";
+export { CalendarIcon } from "./CalendarIcon";
+export { CloseIcon } from "./CloseIcons";
