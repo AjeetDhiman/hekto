@@ -4,8 +4,8 @@ import {
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
-import { classMerge } from "../utils/classMerge";
-import { ChevronDownIcon } from "../icons";
+import { ChevronDownIcon } from "@/icons";
+import { cn } from "@/lib/utils";
 
 interface Option {
   label: string;
@@ -28,10 +28,10 @@ const SelectBox: React.FC<SelectBoxProps> = ({
   ...rest
 }) => {
   return (
-    <div className={classMerge(className)} {...rest}>
+    <div className={cn(className)} {...rest}>
       <Listbox value={defaultValue} onChange={setAction}>
         <ListboxButton
-          className={classMerge(
+          className={cn(
             "relative block w-full rounded-lg bg-transparent pr-5 text-left text-white",
             "focus:not-data-focus:outline-none",
           )}
@@ -49,9 +49,9 @@ const SelectBox: React.FC<SelectBoxProps> = ({
         <ListboxOptions
           anchor="bottom"
           transition
-          className={classMerge(
+          className={cn(
             "bg-white p-1",
-            "origin-bottom-center shadow transition duration-200 ease-out data-closed:scale-95 data-leave:data-closed:opacity-0",
+            "origin-bottom-center z-10 shadow transition duration-200 ease-out data-closed:scale-95 data-leave:data-closed:opacity-0",
           )}
         >
           {list.map((list) => (

@@ -1,9 +1,13 @@
+import BannerSlider from "@/components/BannerSlider";
+import FeaturedProducts from "@/components/FeaturedProducts";
+
 const Home = () => {
-	return (
-		<div className="p-6 bg-blue">
-			Hello Tailwind with CSS variables based colors, gradients and shadows!
-		</div>
-	);
+  return (
+    <div>
+      <BannerSlider />
+      <FeaturedProducts />
+    </div>
+  );
 };
 
 export default Home;

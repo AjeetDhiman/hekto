@@ -1,5 +1,3 @@
-import { type IconProps } from "../utils/types";
-
 export const PhoneIcon: React.FC<IconProps> = (props) => (
   <svg
     fill="none"

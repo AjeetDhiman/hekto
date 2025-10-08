@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+/* 
+	---break---
+	*/
+@custom-variant dark (&:is(.dark *));
 @theme {
   /* 
 	** Colors
@@ -17,7 +22,10 @@
   --color-lavender-blue: #898eb8;
   --color-lavender-mist: #dfd1f5;
   --color-cool-blue: #f2f0ff;
-  /* 
+  --color-dark-indigo: #1a0b5b;
+  --color-pink: #fb2e86;
+  --color-green: #08d15f;
+  /*
 	** Gradients
 	*/
   --color-lg-1: #f5faff;
@@ -43,6 +51,11 @@
 	*/
   --shadow-md: 0 8px 40px 0 #281b8d0d;
   --shadow-lg: 0 4px 79px 0 #7e26e31a;
+  /* 
+  ** Breakpoints
+  */
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
 }
 
 @layer base {
@@ -107,4 +120,25 @@
 
 @utility font-inherit {
   font: inherit;
+}
+.cs__bullets .swiper-pagination {
+  @apply py-2.5;
+}
+.cs__bullets .swiper-pagination-bullet {
+  @apply border-accent !h-2.5 !w-2.5 scale-100 !rotate-45 rounded-none border !bg-transparent opacity-100;
+}
+
+.cs__bullets .swiper-pagination-bullet-active {
+  @apply !bg-accent scale-75;
+}
+
+.featured-products .swiper-pagination {
+  @apply !-bottom-0;
+}
+.featured-products .swiper-pagination-bullet {
+  @apply !h-1 !w-4 rounded-[10px] border-current bg-[#FEBAD7] opacity-100;
+}
+
+.featured-products .swiper-pagination-bullet-active {
+  @apply !w-5 !bg-[#FB2E86];
 }

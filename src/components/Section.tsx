@@ -1,17 +1,17 @@
 import React, { type ReactNode, type HTMLAttributes } from "react";
-import { classMerge } from "../utils/classMerge";
+import { cn } from "@/lib/utils";
 
 interface SectionProps extends HTMLAttributes<HTMLDivElement> {
-	children: ReactNode;
-	className?: string;
+  children: ReactNode;
+  className?: string;
 }
 
 const Section: React.FC<SectionProps> = ({ children, className, ...rest }) => {
-	return (
-		<div className={classMerge("section", className)} {...rest}>
-			{children}
-		</div>
-	);
+  return (
+    <section className={cn("section", className)} {...rest}>
+      {children}
+    </section>
+  );
 };
 
 export default Section;
